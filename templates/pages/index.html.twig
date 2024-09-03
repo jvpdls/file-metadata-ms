@@ -1,0 +1,22 @@
+{% extends '/layouts/base.html.twig' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block head %}
+  <script src="/public/script.js"></script>
+{% endblock %}
+
+{% block content %}
+  <article>
+    <h2>Usage</h2>
+    <p>Upload a file and click the "Analyze" button. Then, you'll be able to see the results on a new page.</p>
+    <article>
+      <form>
+        <label>File<input type="file" name="file" required /></label>
+        <button type="submit">Analyze</button>
+      </form>
+    </article>
+  </article>
+{% endblock %}

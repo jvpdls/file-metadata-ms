@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>
+      {% block title %}
+
+      {% endblock %}| File Metadata Microservice
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="shortcut icon" type="image/png" href="/public/favicon.png" />
+
+    {% block head %}
+
+    {% endblock %}
+  </head>
+  <body class="container">
+    <header>
+      <h1>File Metadata Microservice</h1>
+      <p>A simple file metadata analyser API</p>
+    </header>
+
+    <main>
+      {% block content %}
+
+      {% endblock %}
+    </main>
+
+    <hr />
+    <footer>
+      <p>
+        &copy;
+        {{ 'now'|date('Y') }}
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/joaovpdls/">João Santos</a>. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
