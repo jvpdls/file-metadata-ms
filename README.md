@@ -28,6 +28,7 @@ Installation
 Usage
 -----
 
+1.  **Rename `.env.example` to `.env`**
 1.  **Start the Apache server.**
 2.  **Access the application** via `http://localhost` (or your configured domain).
 3.  **Provide a file** using the web interface.
