@@ -15,8 +15,8 @@ Installation
 
 1.  **Clone the repository:**
     
-        git clone <repository-url>
-        cd <repository-directory>
+        git clone https://github.com/jvpdls/file-metadata-ms.git
+        cd file-metadata-ms
     
 2.  **Install dependencies:**
     
