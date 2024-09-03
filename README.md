@@ -29,11 +29,11 @@ Usage
 -----
 
 1.  **Rename `.env.example` to `.env`**
-1.  **Start the Apache server.**
-2.  **Access the application** via `http://localhost` (or your configured domain).
-3.  **Provide a file** using the web interface.
+2.  **Start the Apache server.**
+3.  **Access the application** via `http://localhost` (or your configured domain).
+4.  **Provide a file** using the web interface.
 
-    3.1. **Alternatively**, you can submit a file via a POST request through an API Client for REST, such as [Insomnia](https://insomnia.rest/):
+    4.1. **Alternatively**, you can submit a file via a POST request through an API Client for REST, such as [Insomnia](https://insomnia.rest/):
     - action: "multipart/form-data"
     - name: "file"
     - value: "your-file.png"
