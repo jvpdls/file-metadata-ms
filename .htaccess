@@ -1,12 +1,11 @@
 RewriteEngine On
+RewriteBase /
 
-# Redirects all '.php' file requests to index.php, except for index.php itself
-RewriteCond %{REQUEST_URI} \.php$ [NC]
-RewriteCond %{REQUEST_URI} !^/index\.php$ [NC]
+# Do not override requests for files in /public
+RewriteCond %{REQUEST_URI} ^/public/ [NC]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirect everything else to index.php
 RewriteRule ^ index.php [L]
-
-# Redirects all requests which are not static files to index.php
-RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|ico)$ [NC]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [QSA,L]
