@@ -1,6 +1,6 @@
 <?php
 
-function showFileMetadata($file)
+function showFileMetadata(array $file = null): string
 {
     $response = array();
 
