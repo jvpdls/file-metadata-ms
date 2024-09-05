@@ -1,0 +1,58 @@
+{% extends '/layouts/base.html.twig' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block head %}
+  <script src="/public/script.js"></script>
+{% endblock %}
+
+{% block content %}
+  <article>
+    <header>
+      <h2>Usage</h2>
+      <p>Upload a file and click the "Analyze" button. Then, you'll be able to see the results on a new page.</p>
+    </header>
+    <article>
+      <form>
+        <label>File<input type="file" name="file" required /></label>
+        <button type="submit">Analyze</button>
+      </form>
+    </article>
+    <article>
+      <header>
+        <h3>POST Request</h3>
+      </header>
+      <p>
+        Alternatively, you can submit a file via a POST request using an API client for REST, such as <a href="https://insomnia.rest/" target="_blank" rel="noopener">Insomnia</a>.
+      </p>
+      <ul>
+        <li>
+          <strong>Method</strong>: <code>POST</code>
+        </li>
+        <li>
+          <strong>Endpoint</strong>: <code>/api/analyze</code>
+        </li>
+        <li>
+          <strong>Content-Type</strong>: <code>multipart/form-data</code>
+        </li>
+        <li>
+          <strong>Form Data</strong>:
+        </li>
+        <ul>
+          <li>
+            <strong>Key</strong>: <code>file</code>
+          </li>
+          <li>
+            <strong>Value</strong>: <code>"your-file.png"</code>
+          </li>
+        </ul>
+      </ul>
+      <h4>Example response</h4>
+      <pre>
+        <code>{ "fileName": "your_file.png", "fileType": "image/png", "fileSize": 12345 }</code>
+      </pre>
+    </article>
+  </article>
+{% endblock %}
