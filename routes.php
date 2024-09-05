@@ -14,7 +14,7 @@ SimpleRouter::get('/', function () use ($twig) {
 });
 
 SimpleRouter::post('/api/analyse', function () {
-    $file = $_FILES['file'];
+    $file = $_FILES['file'] ?? null;
     $response = showFileMetadata($file);
     return $response;
 });
