@@ -33,10 +33,13 @@ Usage
 3.  **Access the application** via `http://localhost` (or your configured domain).
 4.  **Provide a file** using the web interface.
 
-    4.1. **Alternatively**, you can submit a file via a POST request through an API Client for REST, such as [Insomnia](https://insomnia.rest/):
-    - action: "multipart/form-data"
-    - name: "file"
-    - value: "your-file.png"
+    4.1. Alternatively, you can submit a file via a POST request using an API client for REST, such as Insomnia.
+    - Method: `POST`
+    - Endpoint: `/api/analyze`
+    - Content-Type: `multipart/form-data`
+    - Form Data:
+        - Key: `file`
+        - Value: `"your-file.png"`
 
 ### Example response
 
