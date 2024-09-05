@@ -19,7 +19,7 @@ SimpleRouter::post('/api/analyse', function () {
     return $response;
 });
 
-SimpleRouter::all('/{any}', function () use ($twig) {
+SimpleRouter::error(function () use ($twig) {
     SimpleRouter::response()->httpCode(404);
-    return $twig->render('pages/404.html.twig');
+    echo $twig->render('pages/404.html.twig');
 });
