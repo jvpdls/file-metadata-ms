@@ -55,3 +55,8 @@ Contributing
 ------------
 
 Feel free to submit issues or pull requests. Ensure your contributions adhere to the coding standards used in the project.
+
+License
+-------
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
