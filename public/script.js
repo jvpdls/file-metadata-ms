@@ -2,7 +2,7 @@ function sendFileToServer(file) {
   const formData = new FormData();
   formData.append("file", file);
 
-  fetch("/api/analyse", {
+  fetch("/api/analyze", {
     method: "POST",
     body: formData,
   })
